@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:orientation="vertical" android:padding="16dp">
+    <TextView android:id="@+id/tv_label_animal_vacuna"
+        android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Animal" android:textSize="12sp" android:textColor="#6B7280"
+        android:layout_marginBottom="4dp" android:visibility="gone"/>
+    <Spinner android:id="@+id/sp_animal_vacuna"
+        android:layout_width="match_parent" android:layout_height="48dp"
+        android:background="@drawable/spinner_background"
+        android:layout_marginBottom="12dp" android:visibility="gone"/>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Nombre de la Vacuna"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginBottom="10dp">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_nombre_vacuna"
+            android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="text"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Fecha de Aplicación"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginBottom="10dp">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_fecha_aplicacion"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:focusable="false" android:clickable="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <!-- El campo no es editable a mano (se llena con el calendario), así que
+         la X del final es la única forma de quitar una próxima dosis ya puesta. -->
+    <com.google.android.material.textfield.TextInputLayout android:id="@+id/til_proxima_dosis"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Próxima Dosis (opcional)"
+        app:endIconMode="custom" app:endIconDrawable="@android:drawable/ic_menu_close_clear_cancel"
+        app:endIconContentDescription="Quitar próxima dosis"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox" android:layout_marginBottom="10dp">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_proxima_dosis"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:focusable="false" android:clickable="true"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <com.google.android.material.textfield.TextInputLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:hint="Veterinario (opcional)"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <com.google.android.material.textfield.TextInputEditText android:id="@+id/et_veterinario"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:inputType="textCapWords"/>
+    </com.google.android.material.textfield.TextInputLayout>
+</LinearLayout>

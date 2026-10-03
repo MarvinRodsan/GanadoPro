@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dashboardFragment">
+
+    <!-- Dashboard -->
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="com.ganadopro.ui.dashboard.DashboardFragment"
+        android:label="Inicio"
+        tools:layout="@layout/fragment_dashboard">
+        <action android:id="@+id/action_dashboard_to_formAnimal"
+            app:destination="@id/formAnimalFragment"/>
+    </fragment>
+
+    <!-- Animales -->
+    <fragment
+        android:id="@+id/animalesFragment"
+        android:name="com.ganadopro.ui.animales.AnimalesFragment"
+        android:label="Animales"
+        tools:layout="@layout/fragment_animales">
+        <action android:id="@+id/action_animales_to_formAnimal"
+            app:destination="@id/formAnimalFragment"/>
+        <action android:id="@+id/action_animalestoDetalleAnimal"
+            app:destination="@id/detalleAnimalFragment"/>
+    </fragment>
+
+    <!-- Formulario Animal -->
+    <fragment
+        android:id="@+id/formAnimalFragment"
+        android:name="com.ganadopro.ui.animales.FormAnimalFragment"
+        android:label="Registrar Animal"
+        tools:layout="@layout/fragment_form_animal">
+        <argument android:name="animalId"
+            app:argType="long"
+            android:defaultValue="0L"/>
+    </fragment>
+
+    <!-- Detalle Animal -->
+    <fragment
+        android:id="@+id/detalleAnimalFragment"
+        android:name="com.ganadopro.ui.animales.DetalleAnimalFragment"
+        android:label="Detalle"
+        tools:layout="@layout/fragment_detalle_animal">
+        <argument android:name="animalId" app:argType="long"/>
+        <action android:id="@+id/action_detalle_to_historial"
+            app:destination="@id/historialFragment"/>
+        <action android:id="@+id/action_detalle_to_vacunas"
+            app:destination="@id/vacunasFragment"/>
+        <action android:id="@+id/action_detalle_to_alimentacion"
+            app:destination="@id/alimentacionFragment"/>
+        <action android:id="@+id/action_detalle_to_peso"
+            app:destination="@id/pesoFragment"/>
+        <action android:id="@+id/action_detalle_to_produccion"
+            app:destination="@id/produccionFragment"/>
+        <action android:id="@+id/action_detalle_to_reproduccion"
+            app:destination="@id/reproduccionFragment"/>
+        <action android:id="@+id/action_detalle_to_formAnimal"
+            app:destination="@id/formAnimalFragment"/>
+    </fragment>
+
+    <!-- Historial Médico -->
+    <fragment
+        android:id="@+id/historialFragment"
+        android:name="com.ganadopro.ui.historial.HistorialFragment"
+        android:label="Historial Médico">
+        <argument android:name="animalId" app:argType="long"/>
+    </fragment>
+
+    <!-- Vacunas (lista global + por animal) -->
+    <fragment
+        android:id="@+id/vacunasFragment"
+        android:name="com.ganadopro.ui.vacunas.VacunasFragment"
+        android:label="Vacunación">
+        <argument android:name="animalId"
+            app:argType="long"
+            android:defaultValue="0L"/>
+    </fragment>
+
+    <!-- Alimentación -->
+    <fragment
+        android:id="@+id/alimentacionFragment"
+        android:name="com.ganadopro.ui.alimentacion.AlimentacionFragment"
+        android:label="Alimentación">
+        <argument android:name="animalId" app:argType="long"/>
+    </fragment>
+
+    <!-- Control de Peso -->
+    <fragment
+        android:id="@+id/pesoFragment"
+        android:name="com.ganadopro.ui.peso.PesoFragment"
+        android:label="Control de Peso">
+        <argument android:name="animalId" app:argType="long"/>
+    </fragment>
+
+    <!-- Producción Lechera -->
+    <fragment
+        android:id="@+id/produccionFragment"
+        android:name="com.ganadopro.ui.produccion.ProduccionFragment"
+        android:label="Producción Lechera">
+        <argument android:name="animalId" app:argType="long"/>
+    </fragment>
+
+    <!-- Reproducción -->
+    <fragment
+        android:id="@+id/reproduccionFragment"
+        android:name="com.ganadopro.ui.reproduccion.ReproduccionFragment"
+        android:label="Reproducción">
+        <argument android:name="animalId" app:argType="long"/>
+    </fragment>
+
+    <!-- Reportes -->
+    <fragment
+        android:id="@+id/reportesFragment"
+        android:name="com.ganadopro.ui.reportes.ReportesFragment"
+        android:label="Reportes"
+        tools:layout="@layout/fragment_reportes"/>
+
+    <!-- Ventas -->
+    <fragment
+        android:id="@+id/ventasFragment"
+        android:name="com.ganadopro.ui.ventas.VentasFragment"
+        android:label="Ventas"/>
+
+</navigation>

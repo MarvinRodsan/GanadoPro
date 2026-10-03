@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <cache-path name="cache" path="." />
+    <external-files-path name="images" path="Pictures/"/>
+    <!-- Almacenamiento interno persistente para fotos de animales (ver PhotoUtils) -->
+    <files-path name="animal_photos" path="animal_photos/" />
+</paths>

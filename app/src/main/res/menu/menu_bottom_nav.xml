@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/dashboardFragment"
+        android:icon="@drawable/icono_inicio"
+        android:title="Inicio"/>
+
+    <item
+        android:id="@+id/animalesFragment"
+        android:icon="@drawable/icono_animales"
+        android:title="Animales"/>
+
+    <item
+        android:id="@+id/ventasFragment"
+        android:icon="@android:drawable/ic_menu_sort_by_size"
+        android:title="Ventas"/>
+
+    <item
+        android:id="@+id/reportesFragment"
+        android:icon="@drawable/icono_reportes"
+        android:title="Reportes"/>
+
+</menu>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GanadoPro</string>
+    <string name="inicio">Inicio</string>
+    <string name="animales">Animales</string>
+    <string name="vacunas">Vacunas</string>
+    <string name="reportes">Reportes</string>
+    <string name="agregar_animal">Agregar Animal</string>
+    <string name="guardar">Guardar</string>
+    <string name="cancelar">Cancelar</string>
+    <string name="eliminar">Eliminar</string>
+    <string name="editar">Editar</string>
+    <string name="buscar">Buscar animal...</string>
+    <string name="campo_requerido">Este campo es requerido</string>
+</resources>
